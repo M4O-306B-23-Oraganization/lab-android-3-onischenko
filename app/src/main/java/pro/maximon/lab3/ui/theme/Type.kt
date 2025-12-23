@@ -1,4 +1,4 @@
-package ru.lavafrai.study.template.ui.theme
+package pro.maximon.lab3.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

@@ -2,16 +2,17 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
+    id("com.google.devtools.ksp")
 }
 
 android {
-    namespace = "ru.lavafrai.study.template"
+    namespace = "pro.maximon.lab3"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "ru.lavafrai.study.template"
+        applicationId = "pro.maximon.lab3"
         minSdk = 29
-        targetSdk = 36
+        targetSdk = 31
         versionCode = 1
         versionName = "1.0"
 
@@ -60,4 +61,13 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment:${navVersion}")
     implementation("androidx.navigation:navigation-ui:${navVersion}")
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
+
+    val roomVersion = "2.8.4"
+    implementation("androidx.room:room-runtime:$roomVersion")
+    implementation("androidx.room:room-ktx:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
+
+    val koinVersion = "4.0.0"
+    implementation("io.insert-koin:koin-android:$koinVersion")
+    implementation("io.insert-koin:koin-androidx-compose:$koinVersion")
 }

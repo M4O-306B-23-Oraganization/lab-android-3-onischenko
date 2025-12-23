@@ -1,4 +1,4 @@
-package ru.lavafrai.study.template.ui.theme
+package pro.maximon.lab3.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
